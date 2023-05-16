@@ -25,7 +25,7 @@ void main() async {
   final appState = FFAppState(); // Initialize FFAppState
   await appState.initializePersistedState();
 
-  //20230510 : ADDED BY JAIUN BELOW :: ADD NATIVE APP KEYS//
+  //20230510 : ADDED BY JAIUN BELOW :: ADD NATIVE/JS APP KEYS//
 
   // 웹 환경에서 카카오 로그인을 정상적으로 완료하려면 runApp() 호출 전 아래 메서드 호출 필요
   WidgetsFlutterBinding.ensureInitialized();
@@ -36,7 +36,7 @@ void main() async {
       javaScriptAppKey: '${YOUR_JAVASCRIPT_APP_KEY}',
   );
 
-  //20230510 : ADDED BY JAIUN ABOVE :: ADD NATIVE APP KEYS//
+  //20230510 : ADDED BY JAIUN ABOVE :: ADD NATIVE/JS APP KEYS//
 
   runApp(ChangeNotifierProvider(
     create: (context) => appState,
